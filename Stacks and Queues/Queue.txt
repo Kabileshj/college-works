@@ -1,0 +1,30 @@
+class Queue():
+  def __init__(self):
+    self.Queue = []
+
+  def enqueue(self,data):
+    self.Queue.append(data)
+
+  def dequeue(self):
+    data = self.Queue[0]
+    del self.Queue[0]
+    return data
+
+  def isEmpty(self):
+    return self.Queue == []
+
+  def sizeQueue(self):
+    a=len(self.Queue)
+    return a
+
+  def peek(self):
+    return self.Queue[0]
+
+Queue = Queue()
+Queue.enqueue(1)
+Queue.enqueue(2)
+Queue.enqueue(10)
+print("size",Queue.sizeQueue())
+print("dequeued",Queue.dequeue())
+print("size",Queue.sizeQueue())
+print("peek",Queue.peek())
